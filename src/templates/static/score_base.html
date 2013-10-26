@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title> {% block title %} {% endblock %}</title>
+        <link rel="stylesheet" href="{{ MEDIA_URL }}css/styles.css" type="text/css" />
+        <link type="text/css" href="css/eggplant/jquery-ui-1.8.7.custom_date.css" rel="stylesheet" />
+        <link type="text/css" href="errors.css" rel="stylesheet" />
+        <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.7.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.idTabs.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="shortcut icon" href="favicon.ico" />
+
+
+        {% block script %} {% endblock %}
+    </head>
+    <body>
+	    {% include 'static/menu.html' %}
+		<div class = "header-wrapper">
+	    	{% include 'static/header.html' %}
+		</div>
+		{% block body %} {% endblock %}
+		<div class ="push"></div>
+		<div class = "footer">
+			{% include 'static/footer.html'%}
+		</div>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+{% extends "static/base.html" %}
+
+{% block title %}Welcome to Crisis Communicator{% endblock %}
+
+{% block container %}
+{% load bootstrap_toolkit %}
+<div class="container">
+	<form action ="" class = "form-register" method="POST">
+		{% csrf_token %}
+		<fieldset>
+			<legend>Resource Details</legend>
+		</fieldset>
+		{% for form in resource_form %}
+			{% if form.errors %}
+				{% for field in form %}
+					<div class="control-group error">
+						<div class = "controls"> 
+							<span class="help-inline">
+								{% for error in  form.errors %}
+									{{ error }}
+									{% endfor %}
+							</span>
+							{{ field }}
+						</div>
+					</div>
+				{% endfor %}
+			{% else %}
+				{% for field in form %}
+					<div class="control-group">
+						<div class = "controls"> 
+							{{ field }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+        <p>
+        <input placeholder="Quantity" type="text" name="quantity" />
+        <p>
+        <p >
+        <input placeholder="Measurement" type="text" name="measurement" />
+        </p>
+        <p>
+        <input placeholder="Required Quantity" type="text" name="req_quantity" />
+        </p>
+        <p>
+        <input placeholder="Required Measurement" type="text" name="req_measurement" />
+        </p>
+		{% for form in comment_form %}
+			{% if form.errors %}
+				{% for field in form %}
+					<div class="control-group error">
+						<div class = "controls"> 
+							<span class="help-inline">
+								{% for error in  form.errors %}
+									{{ error }}
+									{% endfor %}
+							</span>
+							{{ field }}
+						</div>
+					</div>
+				{% endfor %}
+			{% else %}
+				{% for field in form %}
+					<div class="control-group">
+						<div class = "controls"> 
+							{{ field }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+    	<p align="center"> 
+        	<input type="submit" class="btn btn-primary" value="Enter"/> 
+		</p>
+	</form>	
+{% endblock %}
+
+

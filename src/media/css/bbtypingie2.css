@@ -1,0 +1,58 @@
+/* Style Sheet for Byte Back Typing Tutorial */
+/* Mark Root-Wiley, July 24, 2007 */
+/* For Byte Back Inc. */
+
+body { background: #005C91; font-size: 67.5%; font-family: Arial, Helvetica, Verdana, sans; margin-top: 0px; }
+
+/* Divs */
+#container { width: 709px; margin-right: auto; margin-bottom: 7px; margin-left: auto; background: #005C91 url(../images/bg.gif) repeat-y; }
+
+#banner { float: left; width: 709px; height: 122px; background: #005C91 url(../images/banner.gif) no-repeat; }
+
+#nav { float: left; margin-left: 8px; width: 127px; font-size: 1.1em; font-variant: small-caps; color: #99D2EC; }
+
+#body { float: right; font-size: 1.2em; padding: 0px 15px; margin-right: 3px; width: 528px; }
+
+#footer { float: left; width: 689px; height: 27px; background: #005C91 url(../images/footer.gif) no-repeat; font-size: 1.1em; text-align: right; padding-right: 20px; }
+
+.imageright { float: right; border: 1px solid black; margin: 10px 0px 10px 10px; }
+.imageleft { float: left; border: 1px solid black; margin: 10px 10px 10px 0px; }
+
+/* Header(s) */
+h1 { font-size: 1.4em; color: #005C91; font-style: italic; font-weight: bold; }
+h2 { font-size: 1.2em; color: #005C91; font-weight: bold; }
+
+/* Link Styles */
+a { color: #008CD4; text-decoration: none; }
+a:hover { color: #99D2EC; text-decoration: underline; }
+
+#nav a { color: #FFFFFF; text-decoration: none; }
+#nav a:hover { color: #99D2EC; }
+#nav a.current { color: #99D2EC; font-weight: bold; text-decoration:underline; }
+
+/* List Styles */
+#nav ul { margin: 0px; padding: 0px; }
+#nav li { list-style: none; padding: 0px 0px 4px 0px; width: 127px; }
+
+/* Some dirty CSS to make the typing script work */
+.big	{ foat: left; font-size: 22px; background-color:white; font-family: arial; padding: 20px 20px; margin: 15px 0px; width: 460px; border: 3px double black; }
+.done	{ color: #E7E7E7; }
+.todo	{ color: black; font-weight: normal; text-decoration: underline; margin: 12px 0px; }
+.future	{ color: gray; font-weight: normal;margin: 12px 0px; }
+.prompt { margin: 10px 10px 10px 10px}
+.board	{ float: left; color: #005C91; background: transparent url(../images/keyboard.gif) no-repeat; font-family: monospace; font-size: 30px; font-weight: bold;  width: 466px; height: 270px; padding: 0px 20px; }
+.row0	{ padding: 0 0 0 20px; }
+.row1	{ padding: 0 0 0 35px; margin-top: -1px;}
+.row2	{ padding: 0 0 0 48px; margin-top:-1px; }
+.row3	{ padding: 0 0 0 63px; }
+.row4	{ padding: 2px 0 0 150px; margin-top: -3px; }
+.pressed { color: red; }
+.silent	{color: #005C91;}
+.target	{color: #ffff30;}
+.echo { color: gray; margin: 10px 10px 10px 10px; }
+.count { color:black; font-size: 14px; width: 132px; float: left; text-transform: uppercase; }
+.accuracy { color: black; font-size: 14px; width: 112px; float: left; text-transform: uppercase; }
+.speed { color: black; font-size: 14px; width: 92px; float: left; text-transform: uppercase; }
+.time { color: black; font-size: 14px; width: 112px; float: left; text-transform: uppercase; }
+#scores { float: left; background: #ffffff; width: 448px; border: 1px solid #000000; padding: 6px; margin-top: 7px; } 
+.button	{ float: left; text-align:center; padding: 5px 10px; margin: 10px 0px 10px 185px; }

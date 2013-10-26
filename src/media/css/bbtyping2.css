@@ -1,0 +1,36 @@
+/* Style Sheet for Byte Back Typing Tutorial */
+/* Mark Root-Wiley, July 24, 2007 */
+/* For Byte Back Inc. */
+
+
+/* Divs */
+
+
+#body { height: 600px; font-size: 1.2em; padding: 0px 15px; margin-right: 3px; width: 900px; }
+
+
+.imageright { border: 1px solid black; margin: 10px 0px 10px 10px; }
+.imageleft { float: left; border: 1px solid black; margin: 10px 10px 10px 0px; }
+
+/* Some dirty CSS to make the typing script work */
+.big	{ float: left; font-size: 22px; background-color:white; font-family: monotype; padding: 20px 20px; margin: 15px 0px; width: 460px; border: 3px double black; }
+.done	{ color: #E7E7E7; }
+.todo	{ color: black; font-weight: normal; text-decoration: underline; margin: 12px 0px; }
+.future	{ color: gray; font-weight: normal;margin: 12px 0px; }
+.prompt { margin: 10px 10px 10px 10px}
+.board	{ float: left; color: #005C91; background: transparent url(../images/keyboard.gif) no-repeat; font-family: monospace; font-size: 30px; font-weight: bold;  width: 466px; height: 270px; padding: 0px 20px; }
+.row0	{ padding: 0 0 0 20px; }
+.row1	{ padding: 0 0 0 35px; margin-top:-5px;}
+.row2	{ padding: 0 0 0 45px; margin-top:-2px; }
+.row3	{ padding: 0 0 0 63px; margin-top:-3px; }
+.row4	{ padding: 2px 0 0 150px; margin-top: -4px; }
+.pressed { color: red; }
+.silent	{color: #005C91;}
+.target	{color: #ffff30;}
+.echo { color: gray; margin: 10px 10px 10px 10px; }
+.count { color:black; font-size: 14px; width: 132px; float: left; text-transform: uppercase; }
+.accuracy { color: black; font-size: 14px; width: 112px; float: left; text-transform: uppercase; }
+.speed { color: black; font-size: 14px; width: 92px; float: left; text-transform: uppercase; }
+.time { color: black; font-size: 14px; width: 112px; float: left; text-transform: uppercase; }
+#scores { float: left; background: #ffffff; width: 448px; border: 1px solid #000000; padding: 6px; margin-top: 7px; } 
+.button	{ float: left; text-align:center; padding: 5px 10px; margin: 10px 0px 10px 185px; }

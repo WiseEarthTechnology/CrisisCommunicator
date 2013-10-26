@@ -1,0 +1,4 @@
+Django==1.4.3
+django-bootstrap-toolkit
+django-haystack
+whoosh==2.4

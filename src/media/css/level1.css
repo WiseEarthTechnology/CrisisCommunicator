@@ -1,0 +1,157 @@
+/* CSS Document */
+body{padding:0px; margin:0px; background:url(mainbg.jpg) 0 0 repeat-x #fff; color:#707070; font:14px/18px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+div, p, ul, h2, h3, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+/*----TOP PANEL----*/
+#topPan{width:747px; height:152px; position:relative; margin:0 auto; padding:0px;}
+#topPan img{width:208px; height:58px; position:absolute; top:35px; left:0px;}
+
+#topPan ul{width:480px; height:32px; position:absolute; top:76px; right:0px;}
+#topPan ul li{float:left; width:79px; height:32px; padding:0 0 0 1px;}
+#topPan ul li a{display:block; width:79px; height:32px; background:url(menubg-normal.gif) 0 0 no-repeat #7E7B00; color:#656565; font-size:11px; font-weight:bold; line-height:32px; text-transform:uppercase; text-align:center; text-decoration:none;}
+#topPan ul li a:hover{background:url(images/menubg-hover.gif) 0 0 no-repeat #7E7B00; color:#7C7900; text-decoration:none;}
+
+#topPan ul li.home{display:block; width:79px; height:32px; background:url(menubg-hover.gif) 0 0 no-repeat #7E7B00; font-size:11px; font-weight:bold; line-height:32px; color:#7C7900; text-decoration:none; text-transform:uppercase; text-align:center;}
+
+#topPan ul.dropdown{width:480px; height:22px; position:absolute; top:119px; right:0px;}
+#topPan ul.dropdown li{float:left; width:79px; height:22px; }
+#topPan ul.dropdown li a{display:block; width:79px;background:url(vertical-dot.gif) 100% 0 no-repeat #fff; color:#3E3E3E; font-size:11px; text-decoration:none; text-align:center; line-height:22px;} 
+#topPan ul.dropdown li a:hover{text-decoration:none; background:url(images/vertical-dot.gif) 100% 0 no-repeat #fff; color:#7C7900;}
+
+#topPan ul.dropdown li.verticallinenone a{display:block; width:79px;background:#fff; color:#3E3E3E; font-size:11px; text-decoration:none; text-align:center; line-height:22px;} 
+#topPan ul.dropdown li.verticallinenone a:hover{text-decoration:none; background:#fff; color:#7C7900;}
+
+/*----/TOP PANEL----*/
+
+/*----BODY TOP PANEL----*/
+#bodytopmainPan{width:100%; background:#F4F4F4; color:#8D8D8D; float:left; padding:42px 0 0; clear:both;}
+
+#bodytopPan{width:747px; position:relative; background:#F4F4F4; color:#707070; margin:0 auto; padding:0px;}
+#bodytopPan h2{background:#F4F4F4; color:#6E6C00; font-size:24px; height:70px; line-height:70px;}
+#bodytopPan p{padding:0 38px 11px 0;}
+#bodytopPan p span{font-weight:bold;}
+#bodytopPan p.more{margin:0 0 15px 618px; padding:0px;}
+#bodytopPan p.more a{display:block;width:79px; height:28px; background:url(button1.gif) 0 0 no-repeat #fff; color:#111; font-size:15px; line-height:28px; text-decoration:none; padding:0 0 0 10px;}
+#bodytopPan p.more a:hover{background:url(images/button2.gif) 100% 0% no-repeat #fff; color:#111; text-decoration:none;}
+/*----/BODY TOP PANEL----*/
+
+/*----BODY MIDDLE PANEL----*/
+#bodymainmiddlePan{width:100%; background:#fff; color:#8D8D8D; float:left; padding:42px 0 0; clear:both;}
+
+#bodymiddlePan{width:747px; position:relative; margin:0 auto 0 auto; background:#fff; color:#8D8D8D;}
+/*---Middle One----*/
+#middleonePan{width:187px; float:left;}
+#middleonePan p{padding:0 0 20px 0;}
+#middleonePan p.boldtext{font-size:16px; background:#fff; color:#2B2A2A; font-weight:bold; padding:32px 0 0;}
+#middleonePan p.blacktext{background:#fff; color:#000; padding:0 0 12px 0;}
+#middleonePan p.dotline{background:url(dot.line.gif) 0 0 repeat-x; width:156px; padding:0 0 12px 0;}
+
+#middleonePan p.more{margin:0 0 40px 0px; padding:0px;}
+#middleonePan p.more a{display:block;width:79px; height:28px; background:url(redbutton.gif) 0 0 no-repeat #fff; color:#111; font-size:15px; line-height:28px; text-decoration:none; padding:0 0 0 10px;}
+#middleonePan p.more a:hover{background: url(bluebutton.gif) 0 0 no-repeat #fff; color:#111; text-decoration:none;}
+
+#middleonePan ul{width:156px; padding:0 0 20px 0;}
+#middleonePan ul li{width:156px; height:20px;}
+#middleonePan ul li a{width:140px; height:20px; background:url(arrow1.gif) 0 8px no-repeat #fff; color:#8D8D8D; line-height:20px; text-decoration:underline; padding:0 0 0 16px;}
+#middleonePan ul li a:hover{background:url(images/arrow2.gif) 0 8px no-repeat #fff; color:#272525; text-decoration:underline;}
+
+
+#middleonePan ul.block{width:156px; height:151px; display:block; padding:0px;}
+#middleonePan ul.block li{width:156px; height:151px;}
+#middleonePan ul.block li a{width:126px; height:128px; display:block; background:url(images/block1-normal.jpg) 0 0 no-repeat #FCFCFC; color:#fff; font-size:20px; font-weight:bold; text-decoration:none; padding:23px 0 0 30px;}
+#middleonePan ul.block li a:hover{background:url(images/block1-hover.jpg) 0 0 no-repeat #FCFCFC; color:#fff; text-decoration:none;}
+
+
+/*---/Middle One----*/
+
+/*---Middle Two----*/
+#middletwoPan{width:186px; float:left;}
+#middletwoPan p{padding:0 0 20px 0;}
+#middletwoPan p.boldtext{font-size:16px; background:#fff; color:#2B2A2A; font-weight:bold; padding:32px 0 0;}
+#middletwoPan p.blacktext{background:#fff; color:#000; padding:0 0 12px 0;}
+#middletwoPan p.dotline{background:url(images/dot.line.gif) 0 0 repeat-x; width:156px; padding:0 0 12px 0;}
+
+#middletwoPan p.more{margin:0 0 40px 0px; padding:0px;}
+#middletwoPan p.more a{display:block;width:79px; height:28px; background:url(images/greenbutton.gif) 0 0 no-repeat #fff; color:#111; font-size:15px; line-height:28px; text-decoration:none; padding:0 0 0 10px;}
+#middletwoPan p.more a:hover{background: url(images/pinkbutton.gif) 0 0 no-repeat #fff; color:#111; text-decoration:none;}
+
+#middletwoPan ul{width:156px; padding:0 0 20px 0;}
+#middletwoPan ul li{width:156px; height:20px;}
+#middletwoPan ul li a{width:140px; height:20px; background:url(images/arrow1.gif) 0 8px no-repeat #fff; color:#8D8D8D; line-height:20px; text-decoration:underline; padding:0 0 0 16px;}
+#middletwoPan ul li a:hover{background:url(images/arrow2.gif) 0 8px no-repeat #fff; color:#272525; text-decoration:underline;}
+
+#middletwoPan ul.block{width:156px; height:151px; padding:0px;}
+#middletwoPan ul.block li{width:156px; height:151px;}
+#middletwoPan ul.block li a{width:126px; height:128px; display:block; background:url(images/block2-normal.jpg) 0 0 no-repeat #FCFCFC; color:#fff; font-size:20px; font-weight:bold; text-decoration:none; padding:23px 0 0 30px;}
+#middletwoPan ul.block li a:hover{background:url(images/block2-hover.jpg) 0 0 no-repeat #FCFCFC; color:#fff; text-decoration:none;}
+
+/*---/Middle Two----*/
+
+/*---Middle Three----*/
+#middlethreePan{width:187px; float:left;}
+#middlethreePan p{padding:0 0 20px 0;}
+#middlethreePan p.boldtext{font-size:16px; background:#fff; color:#2B2A2A; font-weight:bold; padding:32px 0 0;}
+#middlethreePan p.blacktext{background:#fff; color:#000; padding:0 0 12px 0;}
+#middlethreePan p.dotline{background:url(images/dot.line.gif) 0 0 repeat-x; width:156px; padding:0 0 12px 0;}
+
+#middlethreePan p.more{margin:0 0 40px 0px; padding:0px;}
+#middlethreePan p.more a{display:block;width:79px; height:28px; background:url(images/bluebutton.gif) 0 0 no-repeat #fff; color:#111; font-size:15px; line-height:28px; text-decoration:none; padding:0 0 0 10px;}
+#middlethreePan p.more a:hover{background: url(images/redbutton.gif) 0 0 no-repeat #fff; color:#111; text-decoration:none;}
+
+#middlethreePan ul{width:156px; padding:0 0 20px 0;}
+#middlethreePan ul li{width:156px; height:20px;}
+#middlethreePan ul li a{width:140px; height:20px; background:url(images/arrow1.gif) 0 8px no-repeat #fff; color:#8D8D8D; line-height:20px; text-decoration:underline; padding:0 0 0 16px;}
+#middlethreePan ul li a:hover{background:url(images/arrow2.gif) 0 8px no-repeat #fff; color:#272525; text-decoration:underline;}
+
+#middlethreePan ul.block{width:156px; height:151px; padding:0px;}
+#middlethreePan ul.block li{width:156px; height:151px;}
+#middlethreePan ul.block li a{width:126px; height:128px; display:block; background:url(images/block3-normal.jpg) 0 0 no-repeat #FCFCFC; color:#fff; font-size:20px; font-weight:bold; text-decoration:none; padding:23px 0 0 30px;}
+#middlethreePan ul.block li a:hover{background:url(images/block3-hover.jpg) 0 0 no-repeat #FCFCFC; color:#fff; text-decoration:none;}
+
+/*---/Middle Threee----*/
+
+/*---Middle Four----*/
+#middlefourPan{width:187px; float:left;}
+#middlefourPan p{padding:0 0 20px 0;}
+#middlefourPan p.boldtext{font-size:16px; background:#fff; color:#2B2A2A; font-weight:bold; padding:32px 0 0;}
+#middlefourPan p.blacktext{background:#fff; color:#000; padding:0 0 12px 0;}
+#middlefourPan p.dotline{background:url(images/dot.line.gif) 0 0 repeat-x; width:156px; padding:0 0 12px 0;}
+
+#middlefourPan p.more{margin:0 0 40px 0px; padding:0px;}
+#middlefourPan p.more a{display:block;width:79px; height:28px; background:url(images/pinkbutton.gif) 0 0 no-repeat #fff; color:#111; font-size:15px; line-height:28px; text-decoration:none; padding:0 0 0 10px;}
+#middlefourPan p.more a:hover{background: url(images/greenbutton.gif) 0 0 no-repeat #fff; color:#111; text-decoration:none;}
+
+#middlefourPan ul{width:156px; padding:0 0 20px 0;}
+#middlefourPan ul li{width:156px; height:20px;}
+#middlefourPan ul li a{width:140px; height:20px; background:url(images/arrow1.gif) 0 8px no-repeat #fff; color:#8D8D8D; line-height:20px; text-decoration:underline; padding:0 0 0 16px;}
+#middlefourPan ul li a:hover{background:url(images/arrow2.gif) 0 8px no-repeat #fff; color:#272525; text-decoration:underline;}
+
+#middlefourPan ul.block{width:156px; height:151px; padding:0px;}
+#middlefourPan ul.block li{width:156px; height:151px;}
+#middlefourPan ul.block li a{width:126px; height:128px; display:block; background:url(images/block4-normal.jpg) 0 0 no-repeat #FCFCFC; color:#fff; font-size:20px; font-weight:bold; text-decoration:none; padding:23px 0 0 30px; text-transform:uppercase;}
+#middlefourPan ul.block li a:hover{background:url(images/block4-hover.jpg) 0 0 no-repeat #FCFCFC; color:#fff; text-decoration:none;}
+
+/*---/Middle Four----*/
+
+/*----FOOTER PANEL----*/
+#footermainPan{height:214px; background:url(images/footerbg.gif) 0 0 repeat-x #565656; color:#fff; clear:both;}
+#footerPan{width:747px; position:relative; margin:0 auto;}
+#footerPan img.footerlogo{width:186px; height:50px; position:absolute; top:93px; right:0px;}
+
+#footerPan p.html{background:url(images/html-button.gif) 0 0 no-repeat; position:absolute; top:42px; right:115px; width:64px; height:22px; padding:3px;}
+#footerPan p.html a{width:55px; height:18px; display:block; font-weight:bold; background:url(images/arrow3.gif) 100% 50% no-repeat #F4F4F4; color:#565656; text-decoration:none; text-transform:uppercase; padding:2px 0 0 5px;}
+#footerPan p.html a:hover{background:url(images/arrow4.gif) 100% 50% no-repeat #F4F4F4; color:#565656; text-decoration:none;}
+
+#footerPan p.css{background:url(images/css-button.gif) 0 0 no-repeat; position:absolute; top:42px; right:55px; width:53px; height:19px; padding:3px;}
+#footerPan p.css a{width:50px; height:18px; display:block; font-weight:bold; background:url(images/arrow5.gif) 90% 50% no-repeat #B3B3B3; color:#fff; text-decoration:none; text-transform:uppercase; padding:2px 0 0 5px;}
+#footerPan p.css a:hover{background:url(images/arrow2.gif) 90% 50% no-repeat #B3B3B3; color:#fff; text-decoration:none;}
+#footerPan p.copyright{background:#565656; color:#fff; font:11px/15px "Trebuchet MS",Arial, Helvetica, sans-serif; position:absolute; top:117px; left:26px;}
+
+#footerPan ul{width:500px; position:absolute; top:93px; left:14px;}
+#footerPan li{float:left; font:13px/15px "Trebuchet MS",Arial, Helvetica, sans-serif; font-weight:normal;}
+#footerPan ul li a{padding:0 12px 0; color:#fff; background:#565656; text-decoration:none;}
+#footerPan ul li a:hover{text-decoration:underline;}
+
+#footerPan ul.templateworld{width:300px; background:#565656; color:#fff; display:block; position:absolute; font-size:12px; top:135px; left:26px;}
+#footerPan ul.templateworld li a{background:#565656; display:block; color:#fff; text-decoration:none;}
+#footerPan ul.templateworld li a:hover{text-decoration:underline;}

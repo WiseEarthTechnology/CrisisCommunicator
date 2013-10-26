@@ -1,0 +1,197 @@
+{% extends "static/base.html" %}
+{%block scripts %}
+	<!-- this cssfile can be found in the jScrollPane package -->
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.jscrollpane.css" />
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.jscrollpane.lozenge.css" />
+	<!-- latest jQuery direct from google's CDN -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!-- the jScrollPane script -->
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.jscrollpane.js"></script>
+	<!-- the mousewheel plugin -->
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.mousewheel.js"></script>
+	<script>
+		// To initially run the function:
+		$(window).resize();
+		$('.show-btn').click(function()
+		{
+			   $(".sidebar-nav-fixed").animate({width:'toggle'},500);       
+			   $(".refugee-btn").animate({width:'toggle'},500);       
+			   $(".feed-btn").animate({width:'toggle'},500);       
+			   $(".refugee").animate({width:'toggle'},500);       
+			   $(".emergency-btn").animate({width:'toggle'},500); 
+		});
+
+		$('.feed-btn').click(function()
+		{
+			   $(".sidebar-nav-fixed").animate({width:'toggle'},500);       
+		});
+	</script>
+	<!--instantiate after some browser sniffing to rule out webkit browsers-->
+	<script type="text/javascript" id="sourcecode">
+		$(function () 
+		{
+			$('.sidebar-nav-fixed').jScrollPane( 
+				{
+					showArrows: true,
+					horizontalGutter: 10
+				}
+			);
+		});
+	</script>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/leaflet.css" type="text/css" />
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/MarkerCluster.css" type="text/css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/MarkerCluster.Default.css" type="text/css" />
+    <script src="{{ STATIC_URL }}js/leaflet.js"></script>
+    <script src="{{ STATIC_URL }}js/refugeecenter.js"></script>
+    <script src="{{ STATIC_URL }}js/leaflet.markercluster-src.js"></script>
+    <script type="text/javascript">
+		var map = L.map('map').setView([22.51256, 81.56348], 10);
+		/* If you are using your own tile server replace a.tile.openstreetmao.org with YOUR_SERVER_ADDRESS/osm/ */
+        L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 80,
+		   	attribution: 'Map data &copy; Crisis Communicator'
+		}).addTo(map);
+	</script>
+	<script type="text/javascript">
+    	{% for refugee in refugee_center %}
+            var refugeeIcon = L.icon({
+                iconUrl: '{{ STATIC_URL }}images/refugee.png',
+                iconSizd: [38, 50],
+                iconAnchor: [22, 94],
+                popupAnchor: [-3, -76],        
+            });
+            var r_display = "<h3><a href=\"/refugeecenter/\">Refugee Center</a></h3><hr />Center ID:<b>{{ refugee.center_id }}</b><hr />"+
+            "Place Name:<b>{{ refugee.place}}</b><hr />Population: <b>{{ refugee.population }}</b><hr />"+
+            "Total Capacity:<b>{{ refugee.population_capacity}}</b><hr />Supplies Available for:<b>{{ refugee.supplies_available_for }}</b><hr /><a href=\"/refugeecenter/delete/?q={{ refugee.pk }}\"><b>Delete</b></a>";
+		    L.marker([{{ refugee.latitude }}, {{ refugee.longitude }}]).addTo(map).bindPopup(r_display).openPopup();
+		{% endfor %} 
+				
+	</script>
+    <script type="text/javascript">
+             var emergencyIcon = L.icon({
+                iconUrl: '{{ STATIC_URL }}images/emergency.png',
+                iconSize: [38, 50],
+                iconAnchor: [22, 94],
+                popupAnchor: [-3, -76],
+            });
+
+            {% for e in emergency %}
+            var e_display = "<h3><b><a href=\"/assessment/emergency/add/\">Emergency</a></b></h3><hr />Service Required: <b>{{ e.service_required }}</b><hr />Cause:<b>{{ e.cause }}</b>"+
+                            "<hr /><a href=\"/assessment/emergency/delete/?q={{ e.pk }}\">Delete</a>";
+            L.marker([{{ e.latitude }}, {{ e.longitude }}], {icon: emergencyIcon}).addTo(map).bindPopup(e_display).openPopup();
+            {% endfor %}
+	</script>
+    <script type="text/javascript">
+            var crimeIcon = L.icon({
+                iconUrl: '{{ STATIC_URL }}images/crimescene.png',
+                iconSize: [38, 50],
+                iconAnchor: [22, 94],
+                popupAnchor: [-3, -76],
+            });
+            {% for c in crime %}
+            var c_display = "<h3><b><a href=\"/assessment/crime/add/\">Crime</a></h3><hr />Crime Type:<b>{{c.crime_type}}</b><hr />Criminals: <b>{{ c.criminals }}<hr />"+
+            "<a href=\"/assessment/crime/delete/?q={{ c.pk }}\">Delete</a></b>";
+            L.marker([{{ c.latitude }}, {{ c.longitude }}], {icon: crimeIcon}).addTo(map).bindPopup(c_display).openPopup();
+            {% endfor %}
+	</script>
+    <script type="text/javascript">
+            {% for r_assess in road %}
+            var road_display="<hr /><h3><b><a href=\"/assessment/road/add/\">Road Assessment</a></h3><hr />Assessment:<b>{{ r_assess.assessment }}</b><hr/>Comment: <b>{{ r_assess.comment }}</b>"+
+                        "<hr /><b><a href=\"/assessment/road/delete/?q={{ r_assess.pk }}\">Delete</a></b>";
+                L.marker([{{ r_assess.latitude }}, {{ r_assess.longitude }}]).addTo(map).bindPopup(road_display).openPopup();                
+            {% endfor %}
+	</script>
+    <script type="text/javascript">
+             var resourceIcon = L.icon({
+                iconUrl: '{{ STATIC_URL }}images/resource.png',
+                iconSize: [38, 50],
+                iconAnchor: [22, 94],
+                popupAnchor: [-3, -76],
+            });
+           {% for resource in resources %}
+            var resource_display ="<h3><b><a href=\"/resource/add/\">Resource</a></h3><hr />Resource:<b>{{ resource.resource_name }}</b><hr />Resource Type: <b>{{ resource.resource_type }}</b>"+
+                                    "<hr />Supply:<b>{{ resource.supply.quantity }}</b>{{ resource.supply.measurement }}<hr /> Required Supply:<b>{{ resource.supply_required.quantity }}"+
+                                    "{{ resource.supply_required.measurement }}<hr />Refugee Center:{{ resource.refugee_center.center_id }}<hr /><a href=\"/resource/delete/?q={{ resource.pk }}\">Delete</a>";
+                                    L.marker([{{ resource.latitude }}, {{ resource.longitude }}], {icon: resourceIcon}).addTo(map).bindPopup(resource_display).openPopup();                
+            {% endfor %}
+	</script>
+    <script type="text/javascript">
+		var popup = L.popup();
+	
+        function onMapClick(e) {
+            var button_display = "<hr /><b><a href=\"/refugeecenter/add/?q="+e.latlng.lat+","+e.latlng.lng +"\">Add Refugee Center</a></b><hr />"+
+                                 "<b><a href=\"/resource/add/?q="+e.latlng.lat+","+e.latlng.lng+"\">Add Resource</a></b><hr />"+
+                                 "<b><a href=\"/assessment/crime/add/?q="+e.latlng.lat+","+e.latlng.lng+"\">Report Crime</a></b><hr />"+
+                                 "<b><a href=\"/assessment/road/add/?q="+e.latlng.lat+","+e.latlng.lng+"\">Assess Road</a></b><hr />"+
+                                 "<b><a href=\"/assessment/emergency/add/?q="+e.latlng.lat+","+e.latlng.lng+"\">Report Emergency</a></b><hr />";
+			popup.setLatLng(e.latlng)
+		    .setContent(button_display)
+		    .openOn(map);
+        }
+		$(window).on("resize", function() {
+			$("#map").height($(window).height()).width($(window).width());
+		 	map.invalidateSize();
+		 }).trigger("resize");
+        map.on('click', onMapClick);
+
+	</script>
+	<style>
+		.btn-group{
+  			position:absolute;
+			bottom:0%;
+		  	left:0%;
+		}
+		.btn :hover {
+			opacity:0.9;
+		}
+		.btn {
+			display:block;
+			border-right: 1px solid #CCC;
+			opacity:0.6;
+  			border-top-right-radius: 4px;
+  			border-bottom-right-radius: 4px;
+  			border-top-left-radius: 4px;
+  			border-bottom-left-radius: 4px;
+  			webkit-border-top-left-radius: 4px;
+ 		 	webkit-border-top-right-radius: 4px;
+  			vertical-align:middle;
+  			z-index: 3001;
+  			box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  			background: #f8f8f9;
+  			-webkit-border-radius: 5px;
+		    border-radius: 5px;
+		}
+	</style>
+{% endblock scripts %}
+
+{% block container %}
+	<div class="container-fluid">
+		<div class="row-fluid row">
+			<div class = "span9"> 
+				<div id = "map" ></div>
+			</div>
+			<div class = "span3">
+				<div class="sidebar-nav-fixed">
+					<ul class="sidebar-nav sidebar-nav-list">
+						<!--  TODO: NEED TO AUTOMATICALLY ADD THE MESSAGES USING AJAX -->
+						<li class="sidebar-nav-header">News Feed</li>
+						<li>
+							<a href="#">Message 9</a>	
+						</li>
+						<li>
+							<a href="#">Message 10</a>	
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="btn-group">
+				<button class="btn feed-btn">Feed</button> 
+				<button class="btn refugee-btn">Refugee</button>
+				<button class="btn emergency-btn">Emergency</button>
+				<button class="btn show-btn">Show/Hide</button>
+			</div>	
+		</div>
+	</div>
+{% endblock %}
+
+

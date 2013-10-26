@@ -1,0 +1,30 @@
+{% extends "static/base.html" %}
+
+{% block title %}Welcome to Crisis Communicator{% endblock %}
+
+{% block container %}
+{% load bootstrap_toolkit %}
+<div class="container">
+    <fieldset>
+        <legend>Refugee Center Details</legend>
+    </fieldset>
+    {% for rcenter in refugeecenter %}
+        {{ rcenter.center_id }}<br/>
+    {% endfor %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if refugeecenter.has_previous %}
+            <a href="?page={{ refugeecenter.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ refugeecenter.number }} of {{ refugeecenter.paginator.num_pages }}.
+            </span>
+
+            {% if refugeecenter.has_next %}
+            <a href="?page={{ refugeecenter.next_page_number }}">next</a>
+            {% endif %}
+        </span>
+    </div> 
+</div>
+{% endblock %}

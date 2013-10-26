@@ -1,0 +1,17 @@
+
+.html .php    { color: #D66; }
+.html .tag    { color: #FD6; }
+.html .aname  { color: #8ac6f2; }
+.html .avalue { color: #8D6; font-style:italic; }
+.html .mlcom  { color: #777; }
+.html .entity { color: #D66; }
+
+.javascript .mlcom    { color: #777; }
+.javascript .com      { color: #555; }
+.javascript .regexp   { color: #D66; }
+.javascript .string   { color: #8D6; font-style:italic; }
+.javascript .paren    { color: #F88; }
+.javascript .reserved { color: #FF9; }
+.javascript .keywords { color: #8ac6f2; }
+.javascript .global   { color: #68D; }
+.javascript .numbers  { color: #D66; }

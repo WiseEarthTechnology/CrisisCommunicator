@@ -1,0 +1,105 @@
+table.yui 
+{
+	font-family:arial;   
+    border-collapse:collapse;	
+    border: solid 3px #7f7f7f;
+    font-size:small;
+}
+
+table.yui td {	
+	padding: 5px;
+	border: 1px solid #7f7f7f;
+	text-align: center; 
+}
+table.yui .even {
+	background-color: #fff;
+}
+table.yui .odd {
+	background-color: #edf5ff;
+}
+table.yui th
+{
+    background: url('sprite.png') repeat-x 0px 0px;    		
+	border: 1px solid #7f7f7f;
+    padding: 5px;
+	height: auto;
+	cursor:pointer;
+}
+
+table.yui th a
+{
+	text-decoration: none;
+	text-align: center;    	
+    padding-right: 20px;
+    font-weight:bold;
+    white-space:nowrap;
+    background: url('bg.gif') no-repeat right 50%;
+}
+
+table.yui thead .headerSortUp , table.yui thead .headerSortDown 
+{
+    background: url('sprite.png') repeat-x 0px -100px;
+}
+
+table.yui .headerSortUp a 
+{	
+    background: url('asc.gif') no-repeat right 50%;
+}
+table.yui .headerSortDown a 
+{    
+    background: url('desc.gif') no-repeat right 50%;
+}
+
+table.yui tfoot td
+{    
+    border-top: 1px solid #7f7f7f;
+    background-color:#E1ECF9;
+}
+
+table.yui thead td
+{
+    vertical-align:middle;
+    background-color:#E1ECF9;
+    border:none;
+}
+
+table.yui thead .tableHeader
+{
+    font-size:larger;
+    font-weight:bold;
+}
+
+table.yui thead .filter
+{
+    text-align:right;
+}
+
+table.yui tfoot
+{
+    background-color:#E1ECF9;
+    text-align:center;      
+}
+
+table.yui .tablesorterPager {
+	padding: 10px 0 10px 0;		
+}
+table.yui .tablesorterPager span {
+	padding: 0 5px 0 5px;
+}
+table.yui .tablesorterPager input.prev {
+	width: auto;
+	margin-right: 10px;
+}
+table.yui .tablesorterPager input.next {
+	width: auto;
+	margin-left: 10px;
+}
+table.yui .pagedisplay 	
+{
+    font-size:10pt;
+	width: 30px;
+	border: 0px;	
+	background-color: #E1ECF9;
+	text-align:center;
+    vertical-align:top;
+}

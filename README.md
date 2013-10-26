@@ -1,3 +1,3 @@
-CrisisCommunicator-Challenge
+CrisisCommunicator-Wiki
 ============================
-https://github.com/WiseEarthTechnology/CrisisCommunicator-Challenge/wiki
+https://github.com/WiseEarthTechnology/CrisisCommunicator/wiki

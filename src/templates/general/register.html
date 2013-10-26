@@ -1,0 +1,42 @@
+{% extends "static/base.html" %}
+
+{% block title %}Welcome to Crisis Communicator{% endblock %}
+
+{% block container %}
+{% load bootstrap_toolkit %}
+<div class="container">
+	<form action ="" class = "form-register" method="POST">{% csrf_token %}
+		{% csrf_token %}
+		<fieldset>
+			<legend>Crisis Communicator</legend>
+		</fieldset>
+		{% for form in register_form %}
+			{% for field in form %}
+				{% if field.errors %}	
+					<div class="control-group error">
+						<div class = "controls"> 
+							{{ feild }}
+							<span class="help-inline">
+								{% for error in  field.errors %}
+									{{ error }}
+								{% endfor %}
+		                       </span>
+						</div>
+					</div>
+				{% else %}
+					<div>
+						<div class = "controls">
+							{{ field }}
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+    	<p align="center"> 
+        	<input type="submit" class="btn btn-primary" value="Register"/> 
+        </p>
+        {{ error }}
+	</form>	
+{% endblock %}
+
+

@@ -1,0 +1,4 @@
+{{ object.person_id }}
+{{ object.person_name }}
+{{ object.gender }}
+{{ object.age }}

@@ -1,0 +1,85 @@
+/* To make the navigation pretty */
+
+.introduction { }
+.introductionb { display: none; }
+
+.howtotype { }
+.howtotypeb { display: none; }
+
+.using { }
+.usingb { display: none; }
+
+.lesson1 { }
+.lesson1b { display: none; }
+
+.lesson2 { }
+.lesson2b { display: none; } /* Or not lesson2b? */
+
+.lesson3 { }
+.lesson3b { display: none; }
+
+.lesson4 { }
+.lesson4b { display: none; }
+
+.lesson5 { }
+.lesson5b { display: none; }
+
+.lesson6 { }
+.lesson6b { display: none; }
+
+.lesson7 { }
+.lesson7b { display: none; }
+
+.lesson8 { }
+.lesson8b { display: none; }
+
+.lesson9 { }
+.lesson9b { display: none; }
+
+.lesson10 { }
+.lesson10b { display: none; }
+
+.lesson11 { }
+.lesson11b { display: none; }
+
+.lesson12 { }
+.lesson12b { display: none; }
+
+.lesson13 { }
+.lesson13b { display: none; }
+
+.lesson14 { }
+.lesson14b { display: none; }
+
+.lesson15 { }
+.lesson15b { display: none; }
+
+.test { display: none; }
+.testb { }
+
+.lesson1ad { }
+.lesson1adb { display: none; }
+
+.lesson2ad { }
+.lesson2adb { display: none; }
+
+.lesson3ad { }
+.lesson3adb { display: none; }
+
+.extra1 { }
+.extra1b { display: none; }
+
+.extra2 { }
+.extra2b { display: none; }
+
+.extra3 { }
+.extra3b { display: none; }
+
+.extra4 { }
+.extra4b { display: none; }
+
+.extra5 { }
+.extra5b { display: none; }
+
+.resources { }
+.resourcesb { display: none; }

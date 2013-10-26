@@ -1,0 +1,23 @@
+{% extends "static/base.html" %}
+
+{% block title %}Welcome to Crisis Communicator{% endblock %}
+
+{% block container %}
+{% load bootstrap_toolkit %}
+<div class="container">
+	<form action ="" class = "form-register" method="POST">
+		{% csrf_token %}
+		<fieldset>
+			<legend>Missing Person's Details</legend>
+        </fieldset>
+        {{ person_form.as_table }}
+        {{ missing_form.as_table }}
+		<p align="center"> 
+        	<input type="submit" class="btn btn-primary" value="Enter"/> 
+            </p>
+            {{ error }}
+            {{ error1 }}
+            {{ error2 }}
+	</form>	
+{% endblock %}
+
