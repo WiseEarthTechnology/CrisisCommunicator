@@ -1,6 +1,6 @@
 Developers
-- Seshagiriprabhu
-- Bithin Alangot 
 - Avani Jain
-- Linkesh Dawan
-- Varrun r
+- Bithin Alangot 
+- Linkesh Diwan
+- Seshagiri Prabhu
+- Varrun R
