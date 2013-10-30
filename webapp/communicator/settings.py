@@ -33,8 +33,7 @@ import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-# To find the CWD
-CWD = os.path.dirname(os.path.realpath('crisis-communicator'))
+PROJECT_PATH = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -45,7 +44,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': CWD + '/db/communicator.db',                      # Or path to database file if using sqlite3.
+        'NAME': PROJECT_PATH + '/db/communicator.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -62,10 +61,6 @@ HAYSTACK_CONNECTIONS = {
 }
 
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
-
-#HAYSTACK_SITECONF = CWD + '/communicator/'
-#HAYSTACK_SEARCH_ENGINE = 'whoosh'
-#HAYSTACK_WHOOSH_PATH = CWD + '/communicator/woosh_index/'
 
 
 # Local time zone for this installation. Choices can be found here:
@@ -94,29 +89,29 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = CWD + '/media/'
+MEDIA_ROOT = os.path.join(PROJECT_PATH, "media")
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = CWD + '/media/'
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = CWD + '/static/'
+STATIC_ROOT = os.path.join(PROJECT_PATH, "static")
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = CWD + '/static/'
+STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    CWD + '/media/',
+    PROJECT_PATH + '/media/',
 )
 
 # List of finder classes that know how to find static files in
@@ -128,6 +123,10 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
+# Generate a secret key, and don't share it with anybody.
+# from django.utils.crypto import get_random_string
+# chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+# get_random_string(50, chars)
 SECRET_KEY = '&amp;f4uv!jf)&amp;188uhle#4$c=%iuiidz8#rw-*#ia6y76d5ko4yn9'
 
 # List of callables that know how to import templates from various sources.
@@ -156,7 +155,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    CWD + '/templates/',
+    PROJECT_PATH + '/templates/',
 )
 
 INSTALLED_APPS = (
