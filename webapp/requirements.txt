@@ -1,5 +1,4 @@
 Django==1.4.3
 django-bootstrap-toolkit
 django-haystack
-whoosh==2.5.0
-simplejson
+whoosh==2.4
