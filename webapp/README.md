@@ -20,4 +20,4 @@ See INSTALL
 CONTRIBUTE
 ==========
 
-See CONTRIBUTE
+https://github.com/WiseEarthTechnology/CrisisCommunicator/wiki
