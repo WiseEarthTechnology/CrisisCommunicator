@@ -1,4 +1,12 @@
 """
+Filename : person/__init__.py
+Authors : Seshagiri Prabhu 
+Copyright : Wise Earth Technolgy
+Credits : Bithin Alangot 
+This file is part of the CrisisCommunicator Project ...
+It is licensed under the Peaceful Open Source License...
+Please see the license terms in PeaceOSL.txt
+-
 Redistribution and use of the software accompanying this license in source and 
 binary forms, with or without modification, are permitted provided that the 
 following conditions are met:

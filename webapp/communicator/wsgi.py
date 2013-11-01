@@ -1,4 +1,12 @@
 """
+Filename : communicator/wsgi.py
+Authors : Seshagiri Prabhu
+Copyright : Wise Earth Technology
+Credits : Bithin Alangot
+This file is part of the Crisis Communictor Project...
+It is licensed under the Peaceful Open Source License ...
+Please see the license terms in PeaceOSL.txt
+-
 WSGI config for communicator project.
 
 This module contains the WSGI application used by Django's development server

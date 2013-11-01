@@ -1,4 +1,12 @@
 """
+Filename : communicator/search_sites.py
+Authors : Seshagiri Prabhu 
+Copyright : Wise Earth Technology
+Credits : Bithin Alangot
+This files is part of the CrisisCommunicator Project...
+It is licensed under the Peaceful Open Source License...
+Please see the license terms in PeceOSL.txt
+-
 Redistribution and use of the software accompanying this license in source and 
 binary forms, with or without modification, are permitted provided that the 
 following conditions are met:

@@ -1,4 +1,12 @@
 """
+Filename : crisis/tests.py
+Authors : Seshagiri Prabhu
+Copyright : Wise Earth Technology
+Credits : Bithin Alangot
+This file is part of the CrisisCommunicator Project ...
+It is licensed under the Peaceful Open Source License...
+Please see the License terms in the PeaceOSL.txt
+-
 This file demonstrates writing tests using the unittest module. These will pass
 when you run "manage.py test".
 

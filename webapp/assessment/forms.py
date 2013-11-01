@@ -1,3 +1,12 @@
+"""
+
+__author__ = "Seshagiri Prabhu"
+__copyright__ = "Copyright 2013, Wise Earth Technology"
+__credits__ = ["Bithin Alangot"]
+__license__ = "PeaceOSL"
+
+"""
+
 from django.forms import ModelForm
 from django import forms
 

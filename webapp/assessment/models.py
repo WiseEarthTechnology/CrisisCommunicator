@@ -1,3 +1,11 @@
+"""
+
+__author__ = "Seshagiri Prabhu"
+__copyright__ = "Copyright 2013, Wise Earth Technology"
+__credits__ = ["Bithin Alangot"]
+__license__ = "PeaceOSL"
+
+"""
 from django.db import models
 
 from crisis.models import Global, Comment

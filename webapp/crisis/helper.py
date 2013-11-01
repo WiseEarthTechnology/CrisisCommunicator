@@ -1,3 +1,12 @@
+"""
+Filename : crisis/helper.py
+Authors : Seshagiri Prabhu 
+Copyrights : Wise Earth Technologies
+Credits : Bithin Alangot
+This file is a part of the CrisisCommunicator Project ...
+It is licensed under the Peaceful Open Source License...
+Please see the license terms in PeaceOSL.txt
+"""
 from django.shortcuts import get_object_or_404
 
 from models import Global, TrackCommunicator

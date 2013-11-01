@@ -1,4 +1,12 @@
 """
+Filename : crisis/views.py
+Authors : Seshagiri Prabhu 
+Copyright : Wise Earth Technology 
+Credits : Bithin Alangot
+This file is a part of the CrisisCommunicator Project...
+It is licenced under the Peaceful Open Source License...
+Please see the license terms in the PeaceOSL.txt
+-
 Redistribution and use of the software accompanying this license in source and 
 binary forms, with or without modification, are permitted provided that the 
 following conditions are met:
