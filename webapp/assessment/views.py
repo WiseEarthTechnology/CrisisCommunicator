@@ -1,11 +1,8 @@
 """
-Filename: assessment/views.py
-Authors: Seshagiri Prabhu 
-Copyright: Wise Earth Technology
-Credits : Bithin Alangot
-This file is part of the CrisisCommunicator Project.  
-It is licensed under the Peaceful Open Source License.  
-Please see the license terms in PeaceOSL.txt
+__authors__ = "Seshagiri Prabhu" "Bithin Alangot"
+__copyright__= "Copyright 2013, Wise Earth Technology"
+__Credits__ = 
+__license__ = "PeaceOSL"
 """
 from django.shortcuts import get_object_or_404, render_to_response
 from django.http import HttpResponseRedirect
@@ -224,11 +221,17 @@ def road_delete(request):
 
     if request.method == 'GET':
         try:
-            road_data = RoadAssessment.objects.get(pk=str(request.POST['q']))
+            road_data = RoadAssessment.objects.get(pk=str(request.GET['q'])) #Harish's second change in code : Replacing POST with GET . i.e initially the code was as follows : road_data = RoadAssessment.objects.get(pk=str(request.POST['q'])) 
             road_data.delete()
             return HttpResponseRedirect('/crisis/')
         except:
             return HttpResponseRedirect('/')
+
+    #Harish's proposed fix 1 
+
+    else :
+        return HttpResponseRedirect('/crisis/')
+
        
 def rendezvous(request):
 
