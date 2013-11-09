@@ -221,13 +221,11 @@ def road_delete(request):
 
     if request.method == 'GET':
         try:
-            road_data = RoadAssessment.objects.get(pk=str(request.GET['q'])) #Harish's second change in code : Replacing POST with GET . i.e initially the code was as follows : road_data = RoadAssessment.objects.get(pk=str(request.POST['q'])) 
+            road_data = RoadAssessment.objects.get(pk=str(request.GET['q']))
             road_data.delete()
             return HttpResponseRedirect('/crisis/')
         except:
             return HttpResponseRedirect('/')
-
-    #Harish's proposed fix 1 
 
     else :
         return HttpResponseRedirect('/crisis/')
