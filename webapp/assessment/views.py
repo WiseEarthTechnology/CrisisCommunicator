@@ -1,8 +1,7 @@
 """
-__authors__ = "Seshagiri Prabhu" "Bithin Alangot"
+__authors__ = ["Seshagiri Prabhu","Bithin Alangot"]
 __copyright__= "Copyright 2013, Wise Earth Technology"
 __Credits__ = 
-__license__ = "PeaceOSL"
 """
 from django.shortcuts import get_object_or_404, render_to_response
 from django.http import HttpResponseRedirect
