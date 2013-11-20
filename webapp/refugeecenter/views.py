@@ -10,7 +10,7 @@ from models import RefugeeCenter
 from crisis.helper import generate_gid
 from crisis.forms import CommentForm
 
-import simplejson as json
+import json
 from haystack.query import *
 
 def refugee_center(request):

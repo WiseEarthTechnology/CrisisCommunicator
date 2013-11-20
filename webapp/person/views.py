@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from haystack.query import *
-import simplejson as json
+import json
 
 from crisis.helper import generate_gid
 from crisis.models import Comment, User
