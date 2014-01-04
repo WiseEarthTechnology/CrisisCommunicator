@@ -29,20 +29,18 @@ def home(request):
     contain message feeds, mostly listing message from the ARPS queue.
 
     """
-
-    if request.session['loggedInside'] == True:
-        #Have to retrieve all the details to be shown on to the map and feed
-        refugee_center = RefugeeCenter.objects.all()
-        emergency = Emergency.objects.all()
-        crime = Crime.objects.all()
-        road = RoadAssessment.objects.all()
-        resource = Resource.objects.all()
-        return render_to_response('crisis/home.html', {'refugee_center':refugee_center, 'emergency':emergency,\
-                                    'crime':crime, 'road':road, 'resources': resource},RequestContext(request))
-    else:
-        return HttpResponseRedirect('/')
-
-
-
-
+    try:
+        if request.session['loggedInside'] == True:
+            #Have to retrieve all the details to be shown on to the map and feed
+            refugee_center = RefugeeCenter.objects.all()
+            emergency = Emergency.objects.all()
+            crime = Crime.objects.all()
+            road = RoadAssessment.objects.all()
+            resource = Resource.objects.all()
+            return render_to_response('crisis/home.html', {'refugee_center':refugee_center, 'emergency':emergency,\
+                                        'crime':crime, 'road':road, 'resources': resource},RequestContext(request))
+        else:
+            return HttpResponseRedirect('/')
+    except KeyError:
+            return HttpResponseRedirect('/')
 
