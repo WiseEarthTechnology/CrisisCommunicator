@@ -1,23 +1,9 @@
-INTRODUCTION
-============
+This is a Django application with a UI built on OpenStreetMaps with a SQLlite backend.
 
-This repository contains the files related to the Crisis Communicator app.
+For installation instructions, see INSTALL.
 
-COPYRIGHT
-=========
-See LICENSE
+For copyright information, See LICENSE.
 
-DEVELOPERS
-==========
+For list of developers, See DEVELOPERS.
 
-See DEVELOPERS
-
-INSTALLATION
-============
-
-See INSTALL
-
-CONTRIBUTE
-==========
-
-See https://github.com/WiseEarthTechnology/CrisisCommunicator/wiki/Development
+To contribute, see https://github.com/WiseEarthTechnology/CrisisCommunicator/wiki/Development
