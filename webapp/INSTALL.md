@@ -57,7 +57,7 @@ $ python manage.py syncdb
 Collecting static files
 -----------------------
 
-Run the followinng command so that necessary static files are copied to STATIC\_ROOT.
+Run the followinng command so that necessary static files are copied to STATIC\_ROOT(```communicator/settings.py```).
 
 ```bash
 $ python manage.py collectstatic
