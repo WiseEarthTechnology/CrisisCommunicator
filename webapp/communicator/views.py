@@ -56,7 +56,7 @@ def user_register(request):
             user_register_form.save()
             return HttpResponseRedirect("/crisis/")
         else:
-            return render_to_response('general/register.html',{'register_form':UserRegisterForm(), 'error':'You have an error'}, RequestContext(request))
+            return render_to_response('general/register.html',{'register_form':UserRegisterForm(), 'error':'Invalid Username/UserID'}, RequestContext(request))
 
     else:
         initial = {
