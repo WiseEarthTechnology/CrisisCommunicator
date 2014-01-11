@@ -220,6 +220,7 @@ def road_delete(request):
             return HttpResponseRedirect('/crisis/')
         except:
             return HttpResponseRedirect('/')
+
 	else:
 		return HttpResponseRedirect('/Crisis/')
        
