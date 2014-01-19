@@ -1,0 +1,2 @@
+MAX_MSG_SZ = 512
+BACKLOG = 0
