@@ -1,5 +1,9 @@
 #Installation
 
+##Development Environment
+
+(if you want to use this code in a production environment, see below)
+
 The recommended way to develop Python projects is to use virtual
 environments for each project.
 
@@ -71,6 +75,11 @@ $ python manage.py runserver
 ```
 
 The development server will be now accessible from <http://127.0.0.1:8080/>
+
+
+##Production Environment
+
+For a production environment, it is recommended that you follow these steps here: http://grokcode.com/784/how-to-setup-a-linux-nginx-uwsgi-python-django-server/
 
 
 ##Installed Apps
