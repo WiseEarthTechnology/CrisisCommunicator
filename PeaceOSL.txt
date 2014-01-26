@@ -19,7 +19,7 @@ Permission is granted to modify, copy, and redistribute this license in accordan
 Notes:
     Clause 1 and 2 come from the BSD 2-Clause license.
     Clause 3 is meant to ensure that the project continues to be open and available to the public.
-    Clause 4 is our "No Military Use" clause.
+    Clause 4 is our "No Harmful Use" clause.
     The disclaimer is adapted from the BSD 2-Clause license.
     
 The Peaceful Open Source License is published by Wise Earth Publishers: www.WiseEarthPublishers.com
