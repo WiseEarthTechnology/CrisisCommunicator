@@ -1,88 +1,75 @@
-#Installation
+#Development Environment
 
-##Development Environment
+(If you want to use this code in a production environment, see below)
 
-(if you want to use this code in a production environment, see below)
+It's super-easy to set up our development environment.
 
-The recommended way to develop Python projects is to use virtual
-environments for each project.
+To begin development, we recommend that you use vagrant.  That makes setting up the development environment super-easy, and also doesn't make any changes to your system.
 
-Setting up a virtual environment
---------------------------------
-PyPi:
+## Collect Pre-Requisites
+
+1. VirtualBox from www.virtualbox.org, or your OS's repositories.
+2. Vagrant from www.vagrantup.com.  Find the packages on the website.
+3. Git version control from www.git-scm.com or your OS's repositories.
+
+## Get the Files
+
+1. Create a folder for this project.
 ```bash
-$ sudo apt-get install python-pip
-```
-Virtualenvwrapper:
-```bash
-$ pip install virtualenvwrapper
-```
-
-Add following to the shell's startup file(.zshrc, .bashrc, .profile, etc)
-
-```bash
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/directory-you-do-development-in
-source /usr/local/bin/virtualenvwrapper.sh
+host:~$ mkdir ~/CrisisCommunicator
+host:~$ cd CrisisCommunicator
 ```
 
-Create a new virtual environment with any name.
-
+2. Clone the Code
 ```bash
-$ mkvirtualenv crisis
+host:~/CrisisCommunicator$ git clone https://github.com/WiseEarthTechnology/CrisisCommunicator-Challenge.git
 ```
 
-This command will create and switch to the virtual environment(the name of the environment will be prepended to the shell). If not, run the following command to switch.
-
+3. Start Vagrant
 ```bash
-$ workon crisis
+host:~/CrisisCommunicator$ vagrant up
 ```
 
-Installation of the app requirements
-------------------------------------
-
-Application packages:
+4. It will download and install the precise64 virtual image, and then boot the system.  After booting, it will update the package lists, and then install `curl`.
+5. After it's booted, log into the vagrant box by:
 ```bash
-$ pip install -r requirements.txt
+host:~/CrisisCommunicator$ vagrant ssh
 ```
 
-Setting up the Database
------------------------
-We have Sqlite3 database in Crisis Communicator:
+6. Run the Adorno script.  It will set up the vagrant box, install requirements, and create a virtual environment.
 ```bash
-$ sudo apt-get install sqlite3
+vagrant:~$ curl -s https://raw.github.com/swiftarrow/Adorno/master/adorno.sh | bash
 ```
 
-After specifying the settings, run the following commands to create the database.
+7. You may now begin development.  Since you're in a vagrant box, you do all the development on your host machine (including git versioning), and run the code on the vagrant machine.  See the readme for Adorno at https://github.com/swiftarrow/Adorno#tango-steps for a quick command reference.
+
+8. Run the following commands to create the database.
 ```bash
-$ python manage.py syncdb
+vagrant:~/vagrant/webapp$ python manage.py syncdb
 ```
 
-Collecting static files
------------------------
-
-Run the followinng command so that necessary static files are copied to STATIC\_ROOT(```communicator/settings.py```).
-
+9. Run the followinng command so that necessary static files are copied to the STATIC\_ROOT configured in ```communicator/settings.py```.
 ```bash
-$ python manage.py collectstatic
+vagrant:~/vagrant/webapp$ python manage.py collectstatic
 ```
 
-Running the development environment
------------------------------------
-If no errors are reported, the development server is ready.
+10. If no errors are reported, the development server is ready.
 ```bash
-$ python manage.py runserver
+vagrant:~/vagrant/webapp$ python manage.py runserver 0.0.0.0:8888
 ```
+The development server will be now accessible from http://127.0.0.1:8888
 
-The development server will be now accessible from <http://127.0.0.1:8080/>
+Welcome Aboard!
 
 
-##Production Environment
+
+
+#Production Environment
 
 For a production environment, it is recommended that you follow these steps here: http://grokcode.com/784/how-to-setup-a-linux-nginx-uwsgi-python-django-server/
 
 
-##Installed Apps
+#Installed Apps
 1. [django-bootstrap-toolkit](https://github.com/dyve/django-bootstrap-toolkit)
 2. [django-haystack](https://github.com/toastdriven/django-haystack)
 3. [Whoosh](https://github.com/JoeGermuska/django-whoosh)
