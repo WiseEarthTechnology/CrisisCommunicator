@@ -36,7 +36,7 @@ host:~/CrisisCommunicator$ vagrant up
 host:~/CrisisCommunicator$ vagrant ssh
 ```
 
-6. Run the Adorno script.  It will set up the vagrant box, install requirements, and create a virtual environment.
+6. Run the Adorno script.  It will set up the vagrant box, install requirements, and create a virtual environment.  You will need to run it twice - see it's instructions.
 ```bash
 vagrant:~$ curl -s https://raw.github.com/swiftarrow/Adorno/master/adorno.sh | bash
 ```
