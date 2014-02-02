@@ -6,4 +6,4 @@ For copyright information, see LICENSE.
 
 For list of developers, see DEVELOPERS.
 
-To contribute, see https://github.com/WiseEarthTechnology/CrisisCommunicator/wiki/Development
+To contribute, see https://github.com/WiseEarthTechnology/CrisisCommunicator/wiki#wiki-how-can-i-contribute
